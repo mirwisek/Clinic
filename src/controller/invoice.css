@@ -1,0 +1,122 @@
+.white-bg {
+	-fx-background-color: #ffffff;
+}
+
+.table-view:disabled .column-header .label {
+  -fx-text-alignment: center;
+  -fx-font-family: Tahoma;
+  -fx-font-size: 10;
+  -fx-opacity: 1.0;
+}
+
+.table-view:disabled .column-header {
+  -fx-background-color: #ffffff;
+  -fx-opacity: 1.0;
+}
+
+.table-view:disabled {
+	-fx-border-color: #ffffff;
+	-fx-border-width: 3px;
+	-fx-opacity: 1.0;
+	-fx-border-radius: 10px;
+	-fx-background-color: #ffffff;
+
+}
+
+.table-view .table-cell {
+	-fx-font-family: Tahoma;
+	-fx-font-size: 8.5;
+	-fx-font-style: normal;
+	-fx-background-color: #ffffff;
+	-fx-border-color: #ffffff;
+	-fx-border-width: 0px;
+	-fx-border-insets: 0px;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-arrow,
+.table-view *.scroll-bar:horizontal *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+
+.list-view *.scroll-bar:vertical *.increment-button,
+.list-view *.scroll-bar:vertical *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.list-view *.scroll-bar:vertical *.increment-arrow,
+.list-view *.scroll-bar:vertical *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+
+
+.list-view *.scroll-bar:horizontal *.increment-button,
+.list-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.list-view *.scroll-bar:horizontal *.increment-arrow,
+.list-view *.scroll-bar:horizontal *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+
+.list-cell {
+	-fx-font-family: Tahoma;
+	-fx-font-size: 8.5;
+	-fx-font-style: normal;
+	-fx-background-color: null;
+	-fx-opacity: 1.0;
+	-fx-padding: 0px;
+}
+
+.rightAlign .list-cell{
+	-fx-alignment: center-right;
+}
+
+.list-view {
+	-fx-background-color: #ffffff;
+	-fx-border-color: #ffffff;
+	-fx-opacity: 1.0;
+}
+
+.button {
+	-fx-font-weight: bold;
+	-fx-border-radius: 0;
+	-fx-border-color: black;
+	-fx-border-width: 2px;
+	-fx-background-color: white;
+}
+
+.button:hover {
+	-fx-text-fill: white;
+	-fx-background-color: black;
+}
+
+.button:pressed {
+	-fx-background-color: dddddd;
+}

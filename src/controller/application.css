@@ -1,0 +1,55 @@
+.tab .tab-label {
+	-fx-pref-width: 100px;
+	-fx-pref-height: 40px;
+}
+
+
+.tfFocusRed {
+	-fx-faint-focus-color: rgba(255,0,105, 0.1);
+	-fx-focus-color: rgba(255,0,105, 1);
+}
+
+.tfFocusGreen {
+	-fx-faint-focus-color: rgba(0,204,153, 0.1);
+	-fx-focus-color: rgba(0,204,153, 1);
+}
+.tfFocusNormal {
+	-fx-faint-focus-color: rgba(0,153,204, 0.1);
+	-fx-focus-color: rgba(0,153,204, 1);
+}
+
+.stateLock .toggle-button {
+	-fx-background-color: transparent;
+	-fx-background-insets: 0;
+	-fx-background-radius: 0;
+	-fx-padding: 0.0em 0.0em 0.0em 0.4em;
+	-fx-graphic: url("../resources/icons/unlock.png");
+	-fx-opacity: 30%;
+}
+
+.stateLock .toggle-button:selected {
+	-fx-graphic: url("../resources/icons/lock_green.png");
+	-fx-opacity: 100%;
+}
+
+.stateCritical .toggle-button {
+	-fx-background-color: transparent;
+	-fx-background-insets: 0;
+	-fx-background-radius: 0;
+	-fx-padding: 0.0em 0.0em 0.0em 0.4em;
+	-fx-graphic: url("../resources/icons/lock_blue.png");
+	-fx-opacity: 100%;
+}
+
+.search-box .arrow-button {
+	-fx-background-color: null;
+	-fx-background-insets: 0;
+	-fx-background-radius: 0;
+	-fx-padding: 0.01em;
+}
+
+.search-box .arrow-button .arrow{
+	-fx-background-insets: 0;
+	-fx-padding: 0.0em;
+	-fx-shape: none;
+}

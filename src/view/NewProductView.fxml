@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewProductController">
+   <children>
+      <GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="600.0" vgap="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="438.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="438.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="438.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="438.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="438.0" minWidth="10.0" prefWidth="120.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="5.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="80.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="1.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Supplier" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label text="Product ID" GridPane.rowIndex="1" />
+            <Label text="Name" GridPane.rowIndex="2" />
+            <Label text="Product Type" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label layoutX="10.0" layoutY="60.0" text="Packing" GridPane.rowIndex="4" />
+            <Label layoutX="286.0" layoutY="60.0" text="Expiry Date" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label alignment="TOP_LEFT" layoutX="286.0" layoutY="100.0" text="Composition" GridPane.rowIndex="3" />
+            <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="100.0" text="Description" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label layoutX="316.0" layoutY="112.0" text="Company" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <TextField fx:id="tfProductID" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ToggleButton fx:id="tbLegal" minWidth="68.0" mnemonicParsing="false" onAction="#handleBtnLegal" text="Illegal" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <DatePicker fx:id="datePickerExpiry" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+            <TextField fx:id="tfName" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cbProductType" prefWidth="247.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <TextArea fx:id="taComposition" prefHeight="400.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+            <TextArea fx:id="taDescription" prefHeight="400.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+            <TextField fx:id="tfPacking" layoutX="124.0" layoutY="55.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="tfSupplier" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <TextField fx:id="tfCompany" layoutX="463.0" layoutY="108.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <TitledPane animated="false" collapsible="false" prefHeight="200.0" prefWidth="200.0" text="Quantity" GridPane.columnSpan="6" GridPane.rowIndex="5">
+               <content>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label text="Carton" />
+                        <TextField fx:id="tfQtyCarton" prefWidth="100.0" />
+                        <Label layoutX="22.0" layoutY="22.0" text="Box" />
+                        <TextField fx:id="tfQtyBox" layoutX="67.0" layoutY="22.0" prefWidth="100.0" />
+                        <Label layoutX="157.0" layoutY="22.0" text="BP" />
+                        <TextField fx:id="tfQtyBP" layoutX="202.0" layoutY="22.0" prefWidth="95.0" />
+                        <Label layoutX="272.0" layoutY="22.0" text="Pills" />
+                        <TextField fx:id="tfQtyPill" layoutX="289.0" layoutY="22.0" prefWidth="95.0" />
+                     </children>
+                  </HBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" collapsible="false" text="Packaging" GridPane.columnSpan="2" GridPane.rowIndex="6">
+               <content>
+                  <GridPane minHeight="170.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Box/Carton" />
+                        <TextField fx:id="tfBoxPCarton" prefWidth="100.0" GridPane.columnIndex="1" />
+                        <Label text="BP/Box" GridPane.rowIndex="1" />
+                        <TextField fx:id="tfBPPBox" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Pills/BP" GridPane.rowIndex="2" />
+                        <TextField fx:id="tfPillPBP" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </content>
+            </TitledPane>
+            <TitledPane collapsible="false" prefWidth="200.0" text="Price" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="6">
+               <content>
+                  <GridPane minHeight="170.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Carton" />
+                        <TextField fx:id="tfPriceCarton" prefWidth="100.0" GridPane.columnIndex="1" />
+                        <Label text="Box" GridPane.rowIndex="1" />
+                        <TextField fx:id="tfPriceBox" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="BP" GridPane.rowIndex="2" />
+                        <TextField fx:id="tfPriceBP" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label layoutX="22.0" layoutY="84.0" text="Pill" GridPane.rowIndex="3" />
+                        <TextField fx:id="tfPricePill" layoutX="75.0" layoutY="79.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </content>
+            </TitledPane>
+            <TitledPane collapsible="false" layoutX="10.0" layoutY="332.0" prefWidth="200.0" text="Cut Rate Price" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="6">
+               <content>
+                  <GridPane minHeight="170.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Carton" />
+                        <TextField fx:id="tfPriceCartonCR" prefWidth="145.0" GridPane.columnIndex="1" />
+                        <Label text="Box" GridPane.rowIndex="1" />
+                        <TextField fx:id="tfPriceBoxCR" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="BP" GridPane.rowIndex="2" />
+                        <TextField fx:id="tfPriceBPCR" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label layoutX="22.0" layoutY="84.0" text="Pill" GridPane.rowIndex="3" />
+                        <TextField fx:id="tfPricePillCR" layoutX="76.0" layoutY="79.0" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </content>
+            </TitledPane>
+            <HBox alignment="TOP_RIGHT" spacing="20.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="8">
+               <children>
+                  <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#handleBtnCancel" prefWidth="100.0" text="Cancel" />
+                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#handleBtnAdd" prefWidth="100.0" text="Add" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

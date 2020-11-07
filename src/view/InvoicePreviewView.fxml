@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.canvas.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="842.0" prefWidth="595.0" stylesheets="@../controller/invoice.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrintPreviewController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="36.0">
+         <children>
+            <Text layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CITY PHARMACEUTICAL">
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#807d7d" layoutX="433.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INVOICE">
+               <font>
+                  <Font name="Tahoma Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="[Your company slogan]">
+               <font>
+                  <Font name="Tahoma" size="8.0" />
+               </font>
+            </Text>
+            <Text layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="[Street Address]">
+               <font>
+                  <Font name="Tahoma" size="8.0" />
+               </font>
+            </Text>
+            <Text layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="[City, ST  ZIP Code]">
+               <font>
+                  <Font name="Tahoma" size="8.0" />
+               </font>
+            </Text>
+            <Text layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone [509.555.0190]  Fax [509.555.0191]">
+               <font>
+                  <Font name="Tahoma" size="8.0" />
+               </font>
+            </Text>
+            <Text layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer No">
+               <font>
+                  <Font name="Tahoma" size="8.0" />
+               </font>
+            </Text>
+            <Text layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name &amp; Address">
+               <font>
+                  <Font name="Tahoma" size="8.0" />
+               </font>
+            </Text>
+            <ListView fx:id="lvInvoice" disable="true" layoutX="377.0" layoutY="41.0" prefHeight="38.0" prefWidth="146.0" styleClass="rightAlign" />
+            <TableView fx:id="table" disable="true" focusTraversable="false" layoutY="137.0" prefHeight="445.0" prefWidth="523.0">
+              <columns>
+                <TableColumn fx:id="colLineNumber" editable="false" prefWidth="28.0" sortable="false" text="SR#" />
+                <TableColumn fx:id="colProductName" editable="false" prefWidth="97.0" sortable="false" text="Product Name" />
+                  <TableColumn fx:id="colProductID" editable="false" prefWidth="55.0" sortable="false" text="Batch No" />
+                  <TableColumn fx:id="colQty" editable="false" prefWidth="50.0" sortable="false" text="Qty" />
+                  <TableColumn fx:id="colDiscount" editable="false" prefWidth="52.0" sortable="false" text="Discount" />
+                  <TableColumn fx:id="colPacking" editable="false" prefWidth="40.0" sortable="false" text="Pack&#10;Size" />
+                  <TableColumn fx:id="colExpiry" editable="false" prefWidth="75.0" sortable="false" text="Expiry&#10;Date" />
+                  <TableColumn fx:id="colPrice" editable="false" prefWidth="60.0" sortable="false" text="Rate /TP&#10;Price" />
+                  <TableColumn fx:id="colNetTotal" editable="false" prefWidth="65.0" sortable="false" text="SubTotal" />
+              </columns>
+            </TableView>
+            <Text layoutY="647.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make all checks payable to [Your Company Name]">
+               <font>
+                  <Font name="Tahoma" size="8.0" />
+               </font>
+            </Text>
+            <Text layoutY="659.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment is due within 30 days.">
+               <font>
+                  <Font name="Tahoma" size="8.0" />
+               </font>
+            </Text>
+            <Text layoutY="670.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you have any questions concerning this invoice, contact [Name, phone number, e-mail]">
+               <font>
+                  <Font name="Tahoma" size="8.0" />
+               </font>
+            </Text>
+            <Text layoutY="694.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank you for your business!">
+               <font>
+                  <Font name="Tahoma" size="8.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblTotal" layoutX="443.0" layoutY="591.0" prefHeight="21.0" prefWidth="82.0" text="0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="377.0" layoutY="591.0" prefHeight="21.0" prefWidth="64.0" text="TOTAL" textAlignment="RIGHT">
+               <font>
+                  <Font name="Tahoma Bold" size="15.0" />
+               </font>
+            </Label>
+            <ListView fx:id="lvClient" disable="true" layoutX="154.0" layoutY="76.0" prefHeight="66.0" prefWidth="135.0" />
+            <HBox fx:id="hBoxButtons" alignment="CENTER" layoutY="715.0" prefHeight="50.0" prefWidth="523.0" spacing="10.0" styleClass="hbox">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleBtnCancel" prefWidth="120.0" text="Cancel">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleBtnPrint" prefWidth="120.0" text="Print Inovice" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

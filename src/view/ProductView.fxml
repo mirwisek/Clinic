@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane prefHeight="580.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductController">
+   <left>
+      <TableView fx:id="tableNavProduct" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="320.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="colState" prefWidth="40.0" />
+            <TableColumn fx:id="colProductID" prefWidth="90.0" text="Product ID" />
+            <TableColumn fx:id="colProductName" prefWidth="188.0" text="Product Name" />
+         </columns>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </BorderPane.margin>
+      </TableView>
+   </left>
+   <right>
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="440.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableDetailProduct" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="200.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn fx:id="colPropertyProduct" prefWidth="75.0" text="Property" />
+                  <TableColumn fx:id="colValueProduct" prefWidth="75.0" text="Value" />
+               </columns>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TableView>
+            <HBox spacing="20.0">
+               <children>
+                  <Button fx:id="btnNewProduct" minWidth="100.0" mnemonicParsing="false" onAction="#handleBtnNew" text="New..." />
+                  <Button fx:id="btnEditProduct" minWidth="100.0" mnemonicParsing="false" onAction="#handleBtnEdit" text="Edit..." />
+                  <Button fx:id="btnDeleteProduct" minWidth="100.0" mnemonicParsing="false" onAction="#handleBtnDelete" text="Delete" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <top>
+      <ToolBar prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <items>
+            <TextField fx:id="tfSearch" prefHeight="30.0" prefWidth="190.0" promptText="Search..." />
+            <ComboBox fx:id="cbSearchBy" prefHeight="30.0" prefWidth="120.0" />
+            <Button fx:id="btnFilter" mnemonicParsing="false" prefHeight="30.0" onAction="#handleBtnFilter" text="Filter" />
+         </items>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </ToolBar>
+   </top>
+</BorderPane>
