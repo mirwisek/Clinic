@@ -1,4 +1,4 @@
-# Clinic
+# Clinic (JavaFX)
 
 ## Database
 Clinic uses Hibernate HSQL DB and creates local database files while the program is run and it if that database folder is deleted the records will be lost
